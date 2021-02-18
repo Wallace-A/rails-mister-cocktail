@@ -1,0 +1,13 @@
+<h1>ADD A NEWW INGREDIENT TO</h1>
+<h1><%= @cocktail.name %></h1>
+
+<% if @cocktail.errors.any? %>
+    <% @cocktail.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+<%= simple_form_for [ @cocktail, @dose ] do |f| %>
+  <%= f.association :ingredient %>  
+  <%= f.input :description %>
+  <%= f.submit "Add Ingredient", class: "btn btn-primary" %>
+<% end %>
