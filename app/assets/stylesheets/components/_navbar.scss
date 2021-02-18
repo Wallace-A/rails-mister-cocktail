@@ -1,6 +1,9 @@
+$bg_color: #161211;
+$dark_red: #B10F2E;
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $bg_color;
+  border-bottom: 2px solid $dark_red;
 }
 
 .navbar-lewagon .navbar-collapse {

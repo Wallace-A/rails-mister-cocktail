@@ -1,14 +1,12 @@
-<h1>List of cocktails</h1>
+<%= render "cocktails/carousel", :cocktails => @cocktails%>
 <%= link_to 'Add New Cocktail', new_cocktail_path, class: 'btn btn-flat' %>
-<% @cocktails.each do |cocktail| %>
-  <div class="container-cocktail">
-    <%= link_to cocktail_path(cocktail) do %>
-      <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= cocktail.name %></h2>
-      </div>
+<% # cocktail cards grid%>
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class="container-cocktail">
+      <%= link_to cocktail_path(cocktail) do %>
+        <% render "cocktails/cocktail_card", :cocktail => cocktail%>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-<% end %>
+  <% end %>
+</div>

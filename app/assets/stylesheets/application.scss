@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+$bg_color: #161211;
+$dark_red: #B10F2E;
+body {
+  background-color: $bg_color;
+}
+
+.btn-flat{
+  background-color: $dark_red;
+}
