@@ -1,7 +1,7 @@
 <% if @cocktails.first %>
 <%= render "cocktails/carousel", :cocktails => @cocktails%>
 <% end %>
-<%= link_to 'Add New Cocktail', new_cocktail_path, class: 'btn btn-flat' %>
+
 <% # cocktail cards grid%>
 <div class="cards">
   <% @cocktails.each do |cocktail| %>

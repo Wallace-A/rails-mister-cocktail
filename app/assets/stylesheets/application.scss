@@ -12,12 +12,64 @@
 @import "components/index";
 @import "pages/index";
 
-$bg_color: #161211;
+$bg_color: #e8ecea;
 $dark_red: #B10F2E;
+$text: white;
+$shadow_size: 10px;
 body {
-  background-color: $bg_color;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,78,1) 50%, rgba(255,219,162,1) 100%);
+  color:white;
+
 }
 
-.btn-flat{
-  background-color: $dark_red;
+#logo{
+  color: $text;
+  font-size: 32px;
+  text-shadow: 0 0 $shadow_size #FF0000;
 }
+
+.navbar-title{
+  color: $text;
+  text-align:left;
+  margin-left: 16px;
+  text-shadow: 0 0 $shadow_size #eea2c8;
+}
+.navbar-brand{
+  display:flex;
+}
+.btn-flat{
+  background-color: #61E8E1;
+  text-shadow: 0 0 $shadow_size black;
+  color: $text;
+  margin: 8px;
+}
+.container-show{
+  width: 600px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.card-product{
+  width:600px;
+  display: flex;
+  background: #140D2A;
+  color:white;
+  align-content: center;
+  justify-content: space-between;
+
+}
+.container-delete{
+  font-size: 32px;
+  text-align: center;
+  align-content: center;
+  height: 100%;
+  margin: 8px;
+}
+
+.card-product-infos{
+ margin: 16px;
+}
+
+

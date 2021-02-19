@@ -7,23 +7,33 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
+
     <div class="carousel-item active">
+      <% cocktail_1 = @cocktails.sample%>
+      <%= link_to cocktail_path(cocktail_1) do %>
       <img class="d-block w-100" src="https://source.unsplash.com/400x200/?cocktails" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h2><%= @cocktails.sample.name %> </h2>
+        <h2 class="carousel-text"><%= cocktail_1.name %> </h2>
       </div>
+      <% end %>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://source.unsplash.com/400x200/?cocktails" alt="Second slide">
+      <% cocktail_2 = @cocktails.sample%>
+      <%= link_to cocktail_path(cocktail_2) do %>
+      <img class="d-block w-100" src="https://source.unsplash.com/400x200/?cocktails" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h2><%= @cocktails.sample.name %></h2>
+        <h2 class="carousel-text"><%= cocktail_2.name %> </h2>
       </div>
+      <% end %>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://source.unsplash.com/400x200/?cocktails" alt="Third slide">
+      <% cocktail_3 = @cocktails.sample%>
+      <%= link_to cocktail_path(cocktail_3) do %>
+      <img class="d-block w-100" src="https://source.unsplash.com/400x200/?cocktails" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h2><%= @cocktails.sample.name %></h2>
+        <h2 class="carousel-text"><%= cocktail_3.name %> </h2>
       </div>
+      <% end %>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
