@@ -8,6 +8,7 @@
   <div class="form-group">
     <%= t.label :name %>
     <%= t.text_field :name %>
+    <%= f.input :photo, as: :file %>
   </div>
   <%= t.submit class: 'btn btn-primary' %>
 <% end %>
